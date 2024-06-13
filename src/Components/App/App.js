@@ -19,9 +19,13 @@ function App() {
     setSelectedArticle(null); // Close the article page after saving
   };
 
+  const goBack = () => {
+    setSelectedArticle(null);
+  };
+
   if (selectedArticle) {
     const article = articles.find(article => article.title === selectedArticle);
-    return <ArticlePage article={article} onSave={saveEditedArticle} />;
+    return <ArticlePage article={article} onSave={saveEditedArticle} onBack={goBack} />;
   }
 
   return (

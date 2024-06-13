@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import '../Articles/articlePage.css'
-const ArticlePage = ({ article, onSave }) => {
+import '../Articles/articlePage.css';
+
+const ArticlePage = ({ article, onSave, onBack }) => {
   const [editedContent, setEditedContent] = useState(article.content);
 
   const handleSave = () => {
@@ -9,6 +10,7 @@ const ArticlePage = ({ article, onSave }) => {
 
   return (
     <div className="article-page">
+      <button onClick={onBack} className="back-button">Back</button>
       <h1>{article.title}</h1>
       <textarea
         value={editedContent}

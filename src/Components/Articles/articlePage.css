@@ -1,4 +1,4 @@
-
+/* articlePage.css */
 .article-page {
   margin-top: 20px;
   padding: 20px;
@@ -35,4 +35,13 @@
 
 .article-page button:hover {
   background-color: #0056b3;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  background-color: #6c757d; /* Gray color for back button */
+}
+
+.back-button:hover {
+  background-color: #5a6268; /* Darker gray on hover */
 }
