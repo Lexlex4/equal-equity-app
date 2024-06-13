@@ -1,14 +1,4 @@
-/* Global styles */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
+/* components/App/App.css */
 
 /* App component styles */
 .App {
@@ -54,11 +44,6 @@ code {
 
 .article-section {
   margin-bottom: 40px;
-}
-
-.article-section h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
 }
 
 .articles-grid {

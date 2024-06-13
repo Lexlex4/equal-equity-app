@@ -1,16 +1,27 @@
 import React, { useState } from 'react';
-import './App.css';
-import ArticlePage from './ArticlePage';
+import './App.css'; // Import local styles for App
+import ArticlePage from '../Articles/ArticlePage';
+import { articlesData } from '../Articles/articleData';
 
 function App() {
+  const [articles, setArticles] = useState(articlesData); // Use mocked article data
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   const openArticlePage = (articleTitle) => {
     setSelectedArticle(articleTitle);
   };
 
+  const saveEditedArticle = (editedArticle) => {
+    const updatedArticles = articles.map(article =>
+      article.id === editedArticle.id ? editedArticle : article
+    );
+    setArticles(updatedArticles);
+    setSelectedArticle(null); // Close the article page after saving
+  };
+
   if (selectedArticle) {
-    return <ArticlePage title={selectedArticle} />;
+    const article = articles.find(article => article.title === selectedArticle);
+    return <ArticlePage article={article} onSave={saveEditedArticle} />;
   }
 
   return (
@@ -32,19 +43,12 @@ function App() {
         <section id="home" className="article-section">
           <h2>Home</h2>
           <div className="articles-grid">
-            <article className="article-card">
-              <h3 onClick={() => openArticlePage('Article Title 1')}>Article Title 1</h3>
-              <p>This is a summary of the first article.</p>
-            </article>
-            <article className="article-card">
-              <h3 onClick={() => openArticlePage('Article Title 2')}>Article Title 2</h3>
-              <p>This is a summary of the second article.</p>
-            </article>
-            <article className="article-card">
-              <h3 onClick={() => openArticlePage('Article Title 3')}>Article Title 3</h3>
-              <p>This is a summary of the third article.</p>
-            </article>
-            {/* Add more articles as needed */}
+            {articles.map((article) => (
+              <article className="article-card" key={article.id}>
+                <h3 onClick={() => openArticlePage(article.title)}>{article.title}</h3>
+                <p>{article.summary}</p>
+              </article>
+            ))}
           </div>
         </section>
         {/* Repeat similar structure for other sections */}
