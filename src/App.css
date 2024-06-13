@@ -1,27 +1,41 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* App component styles */
 .App {
   text-align: center;
 }
 
-.App-title {
-  font-size: 2em;
-  margin: 20px 0;
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
 }
 
-.App-nav {
-  background-color: #333;
-  padding: 10px 0;
+.App-title {
+  font-size: 2em;
 }
 
 .App-nav ul {
-  list-style-type: none;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 20px 0 0 0;
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
 
 .App-nav li {
-  margin: 0 15px;
+  display: inline;
 }
 
 .App-nav a {
@@ -34,51 +48,45 @@
   text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-}
-
 .App-content {
   padding: 20px;
 }
 
 .article-section {
-  margin: 20px 0;
+  margin-bottom: 40px;
 }
 
 .article-section h2 {
   font-size: 1.5em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
 
 .article-card {
-  background-color: #f9f9f9;
   border: 1px solid #ddd;
+  padding: 20px;
+  width: 300px;
   border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  transition: box-shadow 0.3s;
 }
 
 .article-card:hover {
-  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .article-card h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  font-size: 1.3em;
+  margin: 0 0 10px 0;
 }
 
 .article-card p {
+  margin: 0;
   font-size: 1em;
   color: #333;
 }
