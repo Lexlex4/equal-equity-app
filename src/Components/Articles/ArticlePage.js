@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../Articles/articlePage.css'
 const ArticlePage = ({ article, onSave }) => {
   const [editedContent, setEditedContent] = useState(article.content);
 
