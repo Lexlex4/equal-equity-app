@@ -2,17 +2,20 @@
 
 /* App component styles */
 .App {
-  text-align: center;
+  text-align: left;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #004c8c; /* FT or BBC blue */
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 2em;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 .App-nav ul {
@@ -21,7 +24,7 @@
   margin: 20px 0 0 0;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .App-nav li {
@@ -32,6 +35,7 @@
   color: white;
   text-decoration: none;
   font-size: 1.2em;
+  font-weight: bold;
 }
 
 .App-nav a:hover {
@@ -39,7 +43,8 @@
 }
 
 .App-content {
-  padding: 20px;
+  padding: 40px;
+  background-color: #f8f9fa; /* Light gray background */
 }
 
 .article-section {
@@ -58,20 +63,28 @@
   padding: 20px;
   width: 300px;
   border-radius: 8px;
-  transition: box-shadow 0.3s;
+  background-color: white;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .article-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
 }
 
 .article-card h3 {
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin: 0 0 10px 0;
+  color: #004c8c; /* FT or BBC blue */
+  cursor: pointer;
+}
+
+.article-card h3:hover {
+  text-decoration: underline;
 }
 
 .article-card p {
   margin: 0;
   font-size: 1em;
-  color: #333;
+  color: #555;
 }

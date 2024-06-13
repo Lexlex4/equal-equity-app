@@ -4,19 +4,11 @@ import ArticlePage from '../Articles/ArticlePage';
 import { articlesData } from '../Articles/articleData';
 
 function App() {
-  const [articles, setArticles] = useState(articlesData); // Use mocked article data
+  const [articles] = useState(articlesData); // Use mocked article data
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   const openArticlePage = (articleTitle) => {
     setSelectedArticle(articleTitle);
-  };
-
-  const saveEditedArticle = (editedArticle) => {
-    const updatedArticles = articles.map(article =>
-      article.id === editedArticle.id ? editedArticle : article
-    );
-    setArticles(updatedArticles);
-    setSelectedArticle(null); // Close the article page after saving
   };
 
   const goBack = () => {
@@ -25,7 +17,7 @@ function App() {
 
   if (selectedArticle) {
     const article = articles.find(article => article.title === selectedArticle);
-    return <ArticlePage article={article} onSave={saveEditedArticle} onBack={goBack} />;
+    return <ArticlePage article={article} onBack={goBack} />;
   }
 
   return (
