@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../Articles/articlePage.css';
 
 const ArticlePage = ({ article, onBack }) => {
   const [simplifiedContent, setSimplifiedContent] = useState(article.content);
 
+  useEffect(() => {
+    setSimplifiedContent(article.content);
+  }, [article]);
+
   const handleSimplify = async () => {
+    const simplificationPrompt = "Explain the following article content in simple terms suitable for a 5-year-old:";
+    
     const openaiApiKey = 'sk-proj-IvINA3UAUq9RcTDcs8xJT3BlbkFJT2BWEZNKPDARwKxhxl00';
 
     try {
@@ -14,7 +20,7 @@ const ArticlePage = ({ article, onBack }) => {
         {
           model: 'gpt-3.5-turbo',
           messages: [
-            { role: 'system', content: 'Simplify the following article content to be easier to read.' },
+            { role: 'system', content: simplificationPrompt },
             { role: 'user', content: simplifiedContent },
           ],
           max_tokens: 2048,
@@ -35,21 +41,37 @@ const ArticlePage = ({ article, onBack }) => {
     }
   };
 
+  const formatContent = (content) => {
+    // Split content into paragraphs and wrap with <p> tags
+    const paragraphs = content.split('\n\n');
+    const formattedContent = paragraphs.map((paragraph, index) => (
+      <p key={index}>{paragraph}</p>
+    ));
+
+    return formattedContent;
+  };
+
   return (
-    <>
-      <div className="article-page">
-        <button onClick={onBack} className="back-button">Back</button>
-        <button className='back-button' onClick={handleSimplify}>Beginner</button>
+    <div className="article-page">
+      <button onClick={onBack} className="back-button">Back</button>
+      <button className='back-button' onClick={handleSimplify}>Simplify</button>
 
-        <h1>{article.title}</h1>
-        <div
-          className="article-content-display"
-          dangerouslySetInnerHTML={{ __html: simplifiedContent }}
-        />
+      <h1>{article.title}</h1>
+      <div className="article-summary">
+        <p>{article.summary}</p>
       </div>
-
-      <div></div>
-    </>
+      <div className="article-content">
+        {typeof simplifiedContent === 'string' ? (
+          <div className="article-content-display">
+            {formatContent(simplifiedContent)}
+          </div>
+        ) : (
+          <div className="article-content-display">
+            {simplifiedContent}
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 
