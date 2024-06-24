@@ -42,7 +42,6 @@ const ArticlePage = ({ article, onBack }) => {
   };
 
   const formatContent = (content) => {
-    // Split content into paragraphs and wrap with <p> tags
     const paragraphs = content.split('\n\n');
     const formattedContent = paragraphs.map((paragraph, index) => (
       <p key={index}>{paragraph}</p>
