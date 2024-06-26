@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
+  
+  .App-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .App-nav li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .App-content {
+    padding: 20px;
+  }
+  
+  .article-section {
+    margin-bottom: 20px;
+  }
+  
+  .articles-grid {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .article-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+  }
+  
