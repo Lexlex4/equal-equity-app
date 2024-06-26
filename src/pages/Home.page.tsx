@@ -1,25 +1,25 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { articlesData } from '@/components/Articles/articleData';
 import ArticlePage from '@/components/Articles/ArticlePage';
-import { Title, Group, Anchor } from '@mantine/core';
+import { Title, Card, Image, Text } from '@mantine/core';
 
 import './home.css';
 import './app.css';
 
 function App() {
   const [articles] = useState(articlesData); // Use mocked article data
-  const [selectedArticle, setSelectedArticle] = useState<string>();
+  const [selectedArticle, setSelectedArticle] = useState<number | undefined>();
 
-  const openArticlePage = (articleTitle: string) => {
-    setSelectedArticle(articleTitle);
+  const openArticlePage = (articleId: number) => {
+    setSelectedArticle(articleId);
   };
 
   const goBack = () => {
     setSelectedArticle(undefined);
   };
 
-  if (selectedArticle) {
-    const article = articles.find(article => article.title === selectedArticle);
+  if (selectedArticle !== undefined) {
+    const article = articles.find(article => article.id === selectedArticle);
     if (!article) {
       return <Title>Article not found</Title>;
     }
@@ -30,30 +30,38 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">FINANCIAL TIMES</h1>
-        <nav className="App-nav">
-          <Group>
-            <Anchor href="#home">Home</Anchor>
-            <Anchor href="#world">World</Anchor>
-            <Anchor href="#technology">Tech</Anchor>
-            <Anchor href="#sports">Markets</Anchor>
-            <Anchor href="#climate">Climate</Anchor>
-            <Anchor href="#opinion">Opinion</Anchor>
-          </Group>
-        </nav>
       </header>
       <main className="App-content">
         <section id="home" className="article-section">
-          <h2>Home</h2>
           <div className="articles-grid">
             {articles.map((article) => (
-              <article className="article-card" key={article.id}>
-                <h3 onClick={() => openArticlePage(article.title)}>{article.title}</h3>
-                <p>{article.summary}</p>
-              </article>
+              <Card
+                key={article.id}
+                shadow="sm"
+                padding="xl"
+                component="article"
+                className="article-card"
+                onClick={() => openArticlePage(article.id)}
+              >
+                <Card.Section>
+                  <Image
+                    src={article.imageUrl} 
+                    alt={article.title}
+                    h={160}
+                  />
+                </Card.Section>
+                <Card.Section>
+                  <Text size="lg" weight={500} mt="md">
+                    {article.title}
+                  </Text>
+                  <Text size="sm" mt="xs" color="dimmed">
+                    {article.summary}
+                  </Text>
+                </Card.Section>
+              </Card>
             ))}
           </div>
         </section>
-        {/* Repeat similar structure for other sections */}
       </main>
     </div>
   );
