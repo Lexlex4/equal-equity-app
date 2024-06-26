@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../Articles/articlePage.css';
+import './articlePage.css';
 
-const ArticlePage = ({ article, onBack }) => {
+type ArticlePageProps = {
+  article: {id: number, title: string, summary: string, content: string}
+  onBack: () => void
+}
+
+const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
   const [simplifiedContent, setSimplifiedContent] = useState(article.content);
 
   useEffect(() => {
@@ -41,7 +46,7 @@ const ArticlePage = ({ article, onBack }) => {
     }
   };
 
-  const formatContent = (content) => {
+  const formatContent = (content: string) => {
     const paragraphs = content.split('\n\n');
     const formattedContent = paragraphs.map((paragraph, index) => (
       <p key={index}>{paragraph}</p>
