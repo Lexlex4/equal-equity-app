@@ -48,6 +48,7 @@ export const articlesData = [
         On the pay vote, a simple majority must be in favour, excluding those shares owned by Musk and his brother Kimbal. 
         Reincorporation in Texas has a higher bar, requiring a majority of all shares outstanding, meaning those not cast are counted as a “no”.
     `,
+    image: 'https://example.com/image1.jpg'
   },
   {
     id: 2,
@@ -74,6 +75,7 @@ export const articlesData = [
         
         In return for accepting losses of roughly one-third, Sri Lanka’s international bondholders have proposed turning their debt into so-called “macro-linked” bonds, which would offer larger payouts if Sri Lanka’s economy outperforms IMF targets. A first round of talks ended in recent weeks with differences over how to define the GDP trigger for these bonds. Sri Lanka is due to resume the talks soon.
     `,
+    image: 'https://example.com/image1.jpg'
   },
   {
     id: 3,
@@ -124,6 +126,7 @@ export const articlesData = [
 
     Ksenia Khavana, a US-Russian dual national, went on trial last week in Ekaterinburg on treason charges for sending a pro-Ukrainian group $51.80 on the first day of Moscow’s invasion. Judge Andrei Mineyev, who is also overseeing Gershkovich’s case, ordered proceedings to be held in secret in that trial too.
 `,
+image: 'https://example.com/image1.jpg'
   },
   {
     id: 4,
@@ -163,7 +166,8 @@ export const articlesData = [
   The former Fujitsu engineer also assisted the Post Office in the 2019 High Court case.
 
   The Metropolitan Police has interviewed Jenkins under caution in relation to allegations of perjury and perverting the course of justice following evidence he provided as a witness in Post Office prosecutions. Jenkins has not been arrested or charged with any offence.
-  `
+  `,
+  image: 'https://example.com/image1.jpg'
   },
   {
     id: 5,
@@ -225,7 +229,8 @@ export const articlesData = [
   French voters have yet to decide if they want to give Bardella a mandate to carry out such policies. Although he has said he will only accept being prime minister if the RN has an outright majority, Bardella says he is now “convinced” that he will have one. 
 
   In France, the president chairs meetings of the cabinet of ministers, an arrangement that risks being conflictual. Asked what he would tell Macron in the very first session, Bardella paused and said: “Things are going to change now.”
-    `
+    `,
+    image: 'https://example.com/image1.jpg'
   },
   {
     id: 6,
@@ -254,7 +259,8 @@ export const articlesData = [
   
   UBS also said its Latin American business, which was bolstered by teams joining from Credit Suisse, would be split out from its Americas division and continue to be led by Marcello Chilov.
   
-  Meanwhile, Jason Chandler will switch from being head of GWM Americas to chair, with Michael Camacho brought in from JPMorgan to be head of GWM US.`
+  Meanwhile, Jason Chandler will switch from being head of GWM Americas to chair, with Michael Camacho brought in from JPMorgan to be head of GWM US.`,
+  image: 'https://example.com/image1.jpg'
   },
   {
     id: 7,
@@ -288,7 +294,8 @@ The company has received financing from Spotify co-founder Daniel Ek’s investm
 Helsing is seen by some as Europe’s answer to Anduril, the California-based defence tech start-up, which is set to close a $1.5bn fundraising round next month. Peter Thiel’s Founders Fund and Virginia-based Sands Capital will co-lead that investment, valuing the seven-year-old company at $12.5bn, said two people close to the matter. Anduril declined to comment.
 
 Anduril, which also counts Lightspeed among its backers, makes autonomous weapons and defence systems such as drones, rocket-launchers and submarines and is a growing supplier to the US armed forces. It was co-founded by 31-year-old entrepreneur Palmer Luckey, whose previous start-up, Oculus VR, was bought by Facebook in 2014 for $2bn.
-`
+`,
+image: 'https://example.com/image1.jpg'
   },  
   {
 
@@ -310,7 +317,8 @@ Anduril, which also counts Lightspeed among its backers, makes autonomous weapon
   Attempts to negotiate a deal that would include Hizbollah pulling back from the border have not succeeded. But the area has become a de facto military zone, patrolled by Hizbollah fighters, Lebanese armed forces and UN peacekeepers.
   
   The FT combined data from commercial satellites with research from the CUNY Graduate Center and Oregon State University. The researchers apply a technique using imagery from “synthetic aperture radar” satellites, which can detect changes to buildings, and is unaffected by cloud cover.
-  `
+  `,
+  image: 'https://example.com/image1.jpg'
   },
   {
     id: 9,
@@ -339,7 +347,8 @@ Anduril, which also counts Lightspeed among its backers, makes autonomous weapon
   
   Reorienting healthcare systems towards early monitoring and prevention and away from late diagnosis and treatment will require a monumental transformation of cumbersome organisations. But Britain’s Labour party, which appears poised to win next week’s general election, promises to accelerate this transformation in the National Health Service. Labour’s manifesto pledges to create a “Fit For the Future” fund to double the number of CT and MRI scanners to detect early-stage cancers.
   
-  Voters are rightly sceptical of politicians making big promises. But the strains on public finances in ageing societies may soon leave governments with no option but to follow this route. As the Dutch philosopher Desiderius Erasmus supposedly told us five centuries ago: “Prevention is better than cure.” To that end, AI may be among our greatest assets.`
+  Voters are rightly sceptical of politicians making big promises. But the strains on public finances in ageing societies may soon leave governments with no option but to follow this route. As the Dutch philosopher Desiderius Erasmus supposedly told us five centuries ago: “Prevention is better than cure.” To that end, AI may be among our greatest assets.`,
+  image: 'https://example.com/image1.jpg'
   },
   {
     id: 10,
@@ -384,7 +393,8 @@ Anduril, which also counts Lightspeed among its backers, makes autonomous weapon
   
   “There is bound to be more volatility as India gets even more integrated with the global markets,” Narain said. “Currently the reserves seem sufficient and will only increase with this inclusion.”
   
-    `
+    `,
+    image: 'https://example.com/image1.jpg'
   },
   {
     id: 11,
@@ -429,7 +439,8 @@ Anduril, which also counts Lightspeed among its backers, makes autonomous weapon
 
   Reducing interest costs of 8 or 9 per cent by 0.5 or 0.75 percentage points should certainly help a company, said Schwartz, “but you didn’t just cut your debt cost in half . . . it’s not like a game-changer”.
 
-  `
+  `,
+  image: 'https://example.com/image1.jpg'
   },
   {
     id: 12,
@@ -469,6 +480,7 @@ Anduril, which also counts Lightspeed among its backers, makes autonomous weapon
   
   Business secretary Kemi Badenoch countered that the Conservatives had already tried to secure a veterinary deal and that Labour’s plan to reopen talks “is just going to be taking us back into the EU without saying so”.
 
-  `
+  `,
+  image: 'https://example.com/image1.jpg'
   },
 ];

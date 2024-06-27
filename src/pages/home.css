@@ -39,16 +39,37 @@ code {
 
 .articles-grid {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping */
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust spacing between cards */
+  justify-content: space-between; /* Distribute space between items */
 }
 
 .article-card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  width: calc(33.333% - 20px); /* Three items per row */
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-  &:hover {
-    cursor: pointer;
-  }
+  flex: 1 1 calc(25% - 20px); /* Adjust the width of the cards to show 4 in a row */
+  max-width: calc(25% - 20px); /* Ensure cards don't grow larger than 25% of the container width */
+  box-sizing: border-box;
 }
+
+.article-card h3 {
+  font-size: 1.25rem; /* Adjust font size as needed */
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.article-card p {
+  color: #666; /* Adjust color as needed */
+  font-size: 0.875rem; /* Adjust font size as needed */
+  margin: 0;
+}
+
+.article-card-content {
+  padding: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+

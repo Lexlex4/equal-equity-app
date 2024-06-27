@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Group, Button } from '@mantine/core';
 import './articlePage.css';
 
 type ArticlePageProps = {
-  article: { id: number, title: string, summary: string, content: string }
+  article: {id: number, title: string, summary: string, content: string}
   onBack: () => void
 }
 
@@ -58,10 +57,8 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
 
   return (
     <div className="article-page">
-      <Group>
-        <Button variant="default" onClick={onBack}>Back</Button>
-        <Button variant="default" onClick={handleSimplify}>Simplify</Button>
-      </Group>
+      <button onClick={onBack} className="back-button">Back</button>
+      <button className='back-button' onClick={handleSimplify}>Simplify</button>
 
       <h1>{article.title}</h1>
       <div className="article-summary">
