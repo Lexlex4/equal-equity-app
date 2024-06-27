@@ -19,7 +19,7 @@ function App() {
   };
 
   if (selectedArticle) {
-    const article = articles.find(article => article.title === selectedArticle);
+    const article = articles.find((article) => article.title === selectedArticle);
     if (!article) {
       return <Title>Article not found</Title>;
     }
@@ -46,16 +46,13 @@ function App() {
                   onClick={() => openArticlePage(article.title)}
                   style={{ textDecoration: 'none' }}
                 >
-                  <Card.Section>
-                  
-
-
-                  <Image
-          src={article.image}
-          h={160}
-          alt="No way!"
-        />
-
+                  <Card.Section style={{ height: '160px' }}>
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      className="card-image"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
                   </Card.Section>
                   <div className="article-card-content">
                     <Text fw={500} size="lg" mt="md">

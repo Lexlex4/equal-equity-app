@@ -9,6 +9,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.App {
+  background-color: #f0f0f0; 
+  padding: 20px;
+}
+
 .App-header {
   background-color: #282c34;
   padding: 20px;
@@ -40,25 +45,35 @@ code {
 .articles-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; 
-  justify-content: space-between; 
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .article-card {
-  flex: 1 1 calc(25% - 20px); 
-  max-width: calc(25% - 20px); 
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
   box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .article-card h3 {
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
   margin: 0;
   line-height: 1.2;
 }
 
 .article-card p {
-  color: #666; 
-  font-size: 0.875rem; 
+  color: #666;
+  font-size: 0.875rem;
   margin: 0;
 }
 
@@ -69,6 +84,7 @@ code {
 .card-image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
-
-
