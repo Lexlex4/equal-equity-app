@@ -48,4 +48,7 @@ code {
   padding: 20px;
   width: calc(33.333% - 20px); /* Three items per row */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
+  &:hover {
+    cursor: pointer;
+  }
 }
