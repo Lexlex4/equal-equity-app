@@ -40,26 +40,25 @@ code {
 .articles-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust spacing between cards */
-  justify-content: space-between; /* Distribute space between items */
+  gap: 20px; 
+  justify-content: space-between; 
 }
 
 .article-card {
-  flex: 1 1 calc(25% - 20px); /* Adjust the width of the cards to show 4 in a row */
-  max-width: calc(25% - 20px); /* Ensure cards don't grow larger than 25% of the container width */
+  flex: 1 1 calc(25% - 20px); 
+  max-width: calc(25% - 20px); 
   box-sizing: border-box;
 }
 
 .article-card h3 {
-  font-size: 1.25rem; /* Adjust font size as needed */
-  font-weight: 500;
+  font-size: 1.25rem; 
   margin: 0;
   line-height: 1.2;
 }
 
 .article-card p {
-  color: #666; /* Adjust color as needed */
-  font-size: 0.875rem; /* Adjust font size as needed */
+  color: #666; 
+  font-size: 0.875rem; 
   margin: 0;
 }
 
@@ -69,7 +68,7 @@ code {
 
 .card-image {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 

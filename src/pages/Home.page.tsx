@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { articlesData } from '@/components/Articles/articleData';
 import ArticlePage from '@/components/Articles/ArticlePage';
-import { AppShell, Title, Card, Image, Text } from '@mantine/core';
+import { AppShell, Title, Card, Text, Image } from '@mantine/core';
 
 import './home.css';
 import './app.css';
@@ -47,17 +47,20 @@ function App() {
                   style={{ textDecoration: 'none' }}
                 >
                   <Card.Section>
-                    <Image
-                      src={article.image || 'https://via.placeholder.com/150'}
-                      className="card-image"
-                      alt={article.title}
-                    />
+                  
+
+
+                  <Image
+          src={article.image}
+          h={160}
+          alt="No way!"
+        />
+
                   </Card.Section>
                   <div className="article-card-content">
                     <Text fw={500} size="lg" mt="md">
                       <h3>{article.title}</h3>
                     </Text>
-
                     <Text mt="xs" size="sm">
                       <p>{article.summary}</p>
                     </Text>

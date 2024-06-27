@@ -1,3 +1,17 @@
+import EUChambers from '../../images/EUChambers.jpg';
+import CompaniesImg from '../../images/Companies.avif';
+import Indiaimg from '../../images/indiaimg.avif';
+import AIcureimg from '../../images/aicureimg.avif'
+import IPWarimg from '../../images/lebanon.avif'
+import GermanAI from '../../images/germanai.avif'
+import UBSimg from '../../images/ubsimg.avif'
+import FrenchRight from '../../images/frenchjordan.avif'
+import FujitEng from '../../images/engineerfujit.avif'
+import RussiaTrial from '../../images/russiatrial.avif'
+import SriLanka from '../../images/srilanka.avif'
+import ElonMusk from '../../images/elonmusk.avif'
+
+
 export const articlesData = [
   {
     id: 1,
@@ -48,7 +62,7 @@ export const articlesData = [
         On the pay vote, a simple majority must be in favour, excluding those shares owned by Musk and his brother Kimbal. 
         Reincorporation in Texas has a higher bar, requiring a majority of all shares outstanding, meaning those not cast are counted as a “no”.
     `,
-    image: 'https://example.com/image1.jpg'
+    image: ElonMusk,
   },
   {
     id: 2,
@@ -75,7 +89,7 @@ export const articlesData = [
         
         In return for accepting losses of roughly one-third, Sri Lanka’s international bondholders have proposed turning their debt into so-called “macro-linked” bonds, which would offer larger payouts if Sri Lanka’s economy outperforms IMF targets. A first round of talks ended in recent weeks with differences over how to define the GDP trigger for these bonds. Sri Lanka is due to resume the talks soon.
     `,
-    image: 'https://example.com/image1.jpg'
+    image: SriLanka,
   },
   {
     id: 3,
@@ -126,7 +140,7 @@ export const articlesData = [
 
     Ksenia Khavana, a US-Russian dual national, went on trial last week in Ekaterinburg on treason charges for sending a pro-Ukrainian group $51.80 on the first day of Moscow’s invasion. Judge Andrei Mineyev, who is also overseeing Gershkovich’s case, ordered proceedings to be held in secret in that trial too.
 `,
-image: 'https://example.com/image1.jpg'
+image: RussiaTrial,
   },
   {
     id: 4,
@@ -167,7 +181,7 @@ image: 'https://example.com/image1.jpg'
 
   The Metropolitan Police has interviewed Jenkins under caution in relation to allegations of perjury and perverting the course of justice following evidence he provided as a witness in Post Office prosecutions. Jenkins has not been arrested or charged with any offence.
   `,
-  image: 'https://example.com/image1.jpg'
+  image: FujitEng
   },
   {
     id: 5,
@@ -230,7 +244,7 @@ image: 'https://example.com/image1.jpg'
 
   In France, the president chairs meetings of the cabinet of ministers, an arrangement that risks being conflictual. Asked what he would tell Macron in the very first session, Bardella paused and said: “Things are going to change now.”
     `,
-    image: 'https://example.com/image1.jpg'
+    image: FrenchRight,
   },
   {
     id: 6,
@@ -260,7 +274,7 @@ image: 'https://example.com/image1.jpg'
   UBS also said its Latin American business, which was bolstered by teams joining from Credit Suisse, would be split out from its Americas division and continue to be led by Marcello Chilov.
   
   Meanwhile, Jason Chandler will switch from being head of GWM Americas to chair, with Michael Camacho brought in from JPMorgan to be head of GWM US.`,
-  image: 'https://example.com/image1.jpg'
+  image: UBSimg,
   },
   {
     id: 7,
@@ -295,7 +309,7 @@ Helsing is seen by some as Europe’s answer to Anduril, the California-based de
 
 Anduril, which also counts Lightspeed among its backers, makes autonomous weapons and defence systems such as drones, rocket-launchers and submarines and is a growing supplier to the US armed forces. It was co-founded by 31-year-old entrepreneur Palmer Luckey, whose previous start-up, Oculus VR, was bought by Facebook in 2014 for $2bn.
 `,
-image: 'https://example.com/image1.jpg'
+image: GermanAI,
   },  
   {
 
@@ -318,7 +332,7 @@ image: 'https://example.com/image1.jpg'
   
   The FT combined data from commercial satellites with research from the CUNY Graduate Center and Oregon State University. The researchers apply a technique using imagery from “synthetic aperture radar” satellites, which can detect changes to buildings, and is unaffected by cloud cover.
   `,
-  image: 'https://example.com/image1.jpg'
+  image: IPWarimg,
   },
   {
     id: 9,
@@ -348,7 +362,7 @@ image: 'https://example.com/image1.jpg'
   Reorienting healthcare systems towards early monitoring and prevention and away from late diagnosis and treatment will require a monumental transformation of cumbersome organisations. But Britain’s Labour party, which appears poised to win next week’s general election, promises to accelerate this transformation in the National Health Service. Labour’s manifesto pledges to create a “Fit For the Future” fund to double the number of CT and MRI scanners to detect early-stage cancers.
   
   Voters are rightly sceptical of politicians making big promises. But the strains on public finances in ageing societies may soon leave governments with no option but to follow this route. As the Dutch philosopher Desiderius Erasmus supposedly told us five centuries ago: “Prevention is better than cure.” To that end, AI may be among our greatest assets.`,
-  image: 'https://example.com/image1.jpg'
+  image: AIcureimg,
   },
   {
     id: 10,
@@ -394,7 +408,7 @@ image: 'https://example.com/image1.jpg'
   “There is bound to be more volatility as India gets even more integrated with the global markets,” Narain said. “Currently the reserves seem sufficient and will only increase with this inclusion.”
   
     `,
-    image: 'https://example.com/image1.jpg'
+    image: Indiaimg,
   },
   {
     id: 11,
@@ -440,7 +454,7 @@ image: 'https://example.com/image1.jpg'
   Reducing interest costs of 8 or 9 per cent by 0.5 or 0.75 percentage points should certainly help a company, said Schwartz, “but you didn’t just cut your debt cost in half . . . it’s not like a game-changer”.
 
   `,
-  image: 'https://example.com/image1.jpg'
+  image: CompaniesImg,
   },
   {
     id: 12,
@@ -481,6 +495,6 @@ image: 'https://example.com/image1.jpg'
   Business secretary Kemi Badenoch countered that the Conservatives had already tried to secure a veterinary deal and that Labour’s plan to reopen talks “is just going to be taking us back into the EU without saying so”.
 
   `,
-  image: 'https://example.com/image1.jpg'
+  image: EUChambers,
   },
 ];
