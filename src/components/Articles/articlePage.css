@@ -33,7 +33,7 @@
 
 .back-button {
   margin-bottom: 20px;
-  background-color: #6c757d; /* Gray color for back button */
+  background-color: #6c757d; 
   padding: 10px 20px;
   color: white;
   border: none;
@@ -44,5 +44,9 @@
 }
 
 .back-button:hover {
-  background-color: #5a6268; /* Darker gray on hover */
+  background-color: #5a6268; 
+}
+
+body {
+  background-color: #f0f0f0; 
 }
