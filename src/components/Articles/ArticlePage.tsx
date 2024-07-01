@@ -73,13 +73,11 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
   return (
     <div className="article-page">
       <Group>
-        <Button 
-          variant="default" 
-          onClick={onBack} 
-          className="action-button"
-        >
-          Back
-        </Button>
+      <Button 
+  variant="transparent" 
+  onClick={onBack} 
+  className="back-button action-button"
+>Back</Button>
         <Button
           variant="default"
           onClick={() => handleChange('simplify')}
