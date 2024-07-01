@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Group, Button, AppShell, Image } from '@mantine/core';
-import logo from '../../pages/LOGO.png';
+import { Group, Button } from '@mantine/core';
 import './articlePage.css';
 
 type ArticlePageProps = {
@@ -73,17 +72,6 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
 
   return (
     <div className="article-page">
-      <AppShell header={{ height: 120 }} p="md"> 
-        <AppShell.Header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Image
-            src={logo}
-            alt="Logo"
-            height={100} 
-            style={{ maxWidth: '100%', maxHeight: '100%' }}
-          />
-        </AppShell.Header>
-      </AppShell>
-
       <Group>
         <Button 
           variant="default" 
