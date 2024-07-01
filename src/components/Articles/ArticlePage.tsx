@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Group, Button } from '@mantine/core';
+import { BiChevronLeft } from 'react-icons/bi'; 
 import './articlePage.css';
 
 type ArticlePageProps = {
@@ -77,8 +78,9 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
           variant="transparent" 
           onClick={onBack} 
           className="back-button" 
+          leftSection={<BiChevronLeft size={18} />}
         >
-          Back
+        Back
         </Button>
         <Button
           variant="default"

@@ -37,7 +37,7 @@
 }
 
 .back-button {
-  background-color: grey;
+  color: gray;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -47,13 +47,14 @@
 }
 
 .back-button:hover {
-  background-color: #5a6268; /* Darker grey color on hover */
+  background-color: #adb4ba; 
+  color: gray;
 }
 
 .action-button {
-  background-color: #002a5e; /* Blue color for action buttons */
+  background-color: #002a5e; 
   padding: 10px 20px;
-  color: #fff; /* White text color */
+  color: #fff; 
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -62,7 +63,8 @@
 }
 
 .action-button:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
+  background-color: #29517c; 
+  color: #fff; 
 }
 
 
