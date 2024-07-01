@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Group, Button } from '@mantine/core';
 import './articlePage.css';
@@ -73,17 +73,18 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
   return (
     <div className="article-page">
       <Group>
-      <Button 
-  variant="transparent" 
-  onClick={onBack} 
-  className="back-button action-button"
->Back</Button>
+        <Button 
+          variant="transparent" 
+          onClick={onBack} 
+          className="back-button" 
+        >
+          Back
+        </Button>
         <Button
           variant="default"
           onClick={() => handleChange('simplify')}
           loading={loading && currentLoadingButton === 'simplify'}
-          loaderProps={{ type: 'dots' }}
-          className="action-button"
+          className="action-button" 
         >
           Simplify
         </Button>
@@ -91,7 +92,6 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
           variant="default"
           onClick={() => handleChange('summarise')}
           loading={loading && currentLoadingButton === 'summarise'}
-          loaderProps={{ type: 'dots' }}
           className="action-button"
         >
           Summarise
@@ -100,7 +100,6 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
           variant="default"
           onClick={() => handleChange('easier')}
           loading={loading && currentLoadingButton === 'easier'}
-          loaderProps={{ type: 'dots' }}
           className="action-button"
         >
           Easier

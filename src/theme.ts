@@ -5,7 +5,7 @@ export const theme = createTheme({
   colors: {
     gray: [],
     navy: [
-      "#eff1fa",
+      "#002a5e",
       "#dcdeef",
       "#b5bae0",
       "#8b94d2",
