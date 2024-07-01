@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <AppShell header={{ height: 120 }} p="md"> 
-        <AppShell.Header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '20px', paddingBottom: '20px' }}>
+        <AppShell.Header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '10px', paddingBottom: '10px' }}>
           <Image
             src={logo}
             alt="Logo"
