@@ -3,7 +3,6 @@ import { createTheme } from '@mantine/core';
 export const theme = createTheme({
   primaryColor: 'navy',
   colors: {
-    gray: [],
     navy: [
       "#002a5e",
       "#dcdeef",
