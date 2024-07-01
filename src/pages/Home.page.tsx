@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { articlesData } from '@/components/Articles/articleData';
 import ArticlePage from '@/components/Articles/ArticlePage';
 import { AppShell, Title, Card, Text, Image } from '@mantine/core';
-import logo from './LOGO.png';
+import logo from './logo.png';
 import './home.css';
 import './app.css';
 
@@ -33,7 +33,6 @@ function App() {
           <Image
             src={logo}
             alt="Logo"
-            height={100} 
             style={{ maxWidth: '100%', maxHeight: '100%' }}
           />
         </AppShell.Header>
