@@ -19,13 +19,16 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
   }, [article]);
 
   const handleChange = async (option: string) => {
+    if (option === 'revert') {
+      setContent(article.content);
+      return;
+    }
+
     let prompt;
     if (option === 'simplify') {
       prompt = "Explain the following article content in simple terms suitable for someone who has no knowledge of the finance world to understand:";
     } else if (option === 'summarise') {
       prompt = "Summarize the following article content into bullet points and format them one under the other:";
-    } else if (option === 'easier') {
-      prompt = "Revert it back to the original content with the original formatting";
     }
 
     const openaiApiKey = 'sk-proj-IvINA3UAUq9RcTDcs8xJT3BlbkFJT2BWEZNKPDARwKxhxl00';
@@ -64,11 +67,9 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
 
   const formatContent = (content: string) => {
     const paragraphs = content.split('\n\n');
-    const formattedContent = paragraphs.map((paragraph, index) => (
+    return paragraphs.map((paragraph, index) => (
       <p key={index}>{paragraph}</p>
     ));
-
-    return formattedContent;
   };
 
   return (
@@ -100,11 +101,10 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
         </Button>
         <Button
           variant="default"
-          onClick={() => handleChange('revert')}
-          loading={loading && currentLoadingButton === 'revert'}
+          onClick={() => handleChange('original')}
           className="action-button"
         >
-          Revert
+          Original
         </Button>
       </Group>
 
