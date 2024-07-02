@@ -13,14 +13,16 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
   const [content, setContent] = useState(article.content);
   const [loading, setLoading] = useState(false);
   const [currentLoadingButton, setCurrentLoadingButton] = useState<string | null>(null);
+  const [originalContent, setOriginalContent] = useState(article.content);
 
   useEffect(() => {
     setContent(article.content);
+    setOriginalContent(article.content);
   }, [article]);
 
   const handleChange = async (option: string) => {
-    if (option === 'revert') {
-      setContent(article.content);
+    if (option === 'original') {
+      setContent(originalContent);
       return;
     }
 
@@ -68,7 +70,9 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
   const formatContent = (content: string) => {
     const paragraphs = content.split('\n\n');
     return paragraphs.map((paragraph, index) => (
-      <p key={index}>{paragraph}</p>
+      <p key={index}>{paragraph.split('\n').map((line, i) => (
+        <span key={i}>{line}<br/></span>
+      ))}</p>
     ));
   };
 
@@ -113,15 +117,9 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
         <p>{article.summary}</p>
       </div>
       <div className="article-content">
-        {typeof content === 'string' ? (
-          <div className="article-content-display">
-            {formatContent(content)}
-          </div>
-        ) : (
-          <div className="article-content-display">
-            {content}
-          </div>
-        )}
+        <div className="article-content-display">
+          {formatContent(content)}
+        </div>
       </div>
     </div>
   );
