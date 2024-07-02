@@ -21,11 +21,11 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
   const handleChange = async (option: string) => {
     let prompt;
     if (option === 'simplify') {
-      prompt = "Explain the following article content in simple terms suitable for a 5-year-old:";
+      prompt = "Explain the following article content in simple terms suitable for someone who has no knowledge of the finance world to understand:";
     } else if (option === 'summarise') {
-      prompt = "Summarize the following article content into bullet points:";
+      prompt = "Summarize the following article content into bullet points and format them one under the other:";
     } else if (option === 'easier') {
-      prompt = "Explain the following article content in simpler terms suitable for someone with basic knowledge of finance:";
+      prompt = "Revert it back to the original content with the original formatting";
     }
 
     const openaiApiKey = 'sk-proj-IvINA3UAUq9RcTDcs8xJT3BlbkFJT2BWEZNKPDARwKxhxl00';
@@ -100,11 +100,11 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
         </Button>
         <Button
           variant="default"
-          onClick={() => handleChange('easier')}
-          loading={loading && currentLoadingButton === 'easier'}
+          onClick={() => handleChange('revert')}
+          loading={loading && currentLoadingButton === 'revert'}
           className="action-button"
         >
-          Easier
+          Revert
         </Button>
       </Group>
 
