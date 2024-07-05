@@ -35,7 +35,7 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
       You will be presented with an article from a financial publication, and your task is to simplify the article as follows:
       - Reduce the amount of jargon words used (e.g. EBITDA, EPS, etc. and replace these with concepts that are simple to understand)
       - Provide explanations in brackets when the use of jargon is unavoidable.
-      - Include all of the content from the original article in your respoonse. Ensure none of the information is left out.
+      - Make the article shorter and easier to understand for a general audience.
       `
     } else if (option === 'summarise') {
       prompt = `
@@ -43,7 +43,7 @@ const ArticlePage = ({ article, onBack }: ArticlePageProps) => {
 
       You will be presented with an article from a news website. Your task is to break down the article into a series of easy to understand bullet points.
 
-      Each important fact from the article should correspond to a single bullet point. Ensure as much of the article is included in your response as possible.
+      Each important fact from the article should correspond to a single bullet point.
 
       Ensure that your summary will take no longer than 2 minutes to read.
       `

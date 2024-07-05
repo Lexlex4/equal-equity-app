@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { articlesData } from '@/components/Articles/articleData';
 import ArticlePage from '@/components/Articles/ArticlePage';
 import { AppShell, Title, Card, Text, Image } from '@mantine/core';
-import logo from './logo.png';
+import logo from './LOGO.png';
 import './home.css';
 import './app.css';
 
